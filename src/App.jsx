@@ -4,6 +4,7 @@ import Header from "./sections/Header"
 import Tech from "./sections/Tech"
 import FeaturedProjects from "./sections/FeaturedProjects"
 import Footer from "./sections/Footer"
+import projects from "./data/projects.json"
 
 
 const App = () => {
@@ -11,7 +12,9 @@ const App = () => {
     <>
       <Header />
       <Tech />
-      <FeaturedProjects />
+      <FeaturedProjects 
+        projects={projects.projects}
+        />
       <Footer />
     </>
   )

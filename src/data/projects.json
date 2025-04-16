@@ -1,18 +1,8 @@
 {
   "projects": [
     {
-      "name": "Business site",
-      "image": "https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2497&q=80",
-      "tags": [
-        "HTML5",
-        "CSS3",
-        "JavaScript"
-      ],
-      "netlify": "link",
-      "github": "link"
-    },
-    {
       "name": "Weather app",
+      "bio": "An interactive weather app that fetches current API data for today and a 4-day forecast. The app theme shifts with the time of day from daytime to nighttime colors and icons using Typescript/Javascript. ",
       "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
       "tags": [
         "HTML5",
@@ -21,8 +11,44 @@
         "TypeScript",
         "APIs"
       ],
-      "netlify": "link",
-      "github": "link"
+      "netlify": "https://wind1weatherapp.netlify.app",
+      "github": "https://github.com/govargas/js-project-weather-app"
+    },
+    {
+      "name": "Accessibility For All",
+      "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Accessibility"
+      ],
+      "netlify": "https://teamwind1.netlify.app",
+      "github": "https://github.com/Bianka2112/js-project-accessibility"
+    },
+    {
+      "name": "Recipe Library app",
+      "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "TypeScript",
+        "APIs"
+      ],
+      "netlify": "https://luminous-mandazi-4c7550.netlify.app/",
+      "github": "https://github.com/Bianka2112/js-project-recipe-library"
+    },
+    {
+      "name": "First self-coded project: The Stockholm Buzz",
+      "image": "https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2497&q=80",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "netlify": "https://thestockholmbuzz.netlify.app/",
+      "github": "https://github.com/Bianka2112/js-project-business-site"
     }
   ]
 }

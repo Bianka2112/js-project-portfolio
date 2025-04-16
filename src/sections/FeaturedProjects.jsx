@@ -1,13 +1,19 @@
-import Card from "../components/Card";
+import Card from "../components/Card"
 
-const FeaturedProjects = () => {
+
+const FeaturedProjects = ({ projects }) => {
   return (
     <>
       <h2>Featured Projects</h2>
-      <Card 
-        title="Weather App"
-        text="Lorem"
-        />
+      {projects.map((proj) => {
+        return (
+          <Card 
+            key={proj.name}
+            title={proj.name}
+            text={proj.tags.join(", ")}
+            />
+        )
+      })}
     </>
   )
 }
