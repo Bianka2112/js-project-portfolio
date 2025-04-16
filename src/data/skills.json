@@ -1,0 +1,49 @@
+{
+  "skills": [
+    {
+      "category": "Code",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript ES6",
+        "TypeScript",
+        "APIs",
+        "Github",
+        "VS Code",
+        "Codepen"
+      ]
+    },
+    {
+      "category": "Toolbox",
+      "tags": [
+        "Adobe Photoshop",
+        "Adobe Lightroom",
+        "Capcut",
+        "Figma",
+        "Notion",
+        "Slack"
+
+      ]
+    },
+    {
+      "category": "Upcoming",
+      "tags": [
+        "Node.js",
+        "React",
+        "Styled Components",
+        "MongoDB"
+      ]
+    },
+    {
+      "category": "More",
+      "tags": [
+        "Leadership",
+        "Agile Methodology",
+        "Image Editing",
+        "Mobile-First",
+        "Responsive Design",
+        "Accessibility"
+      ]
+    }
+  ]
+}

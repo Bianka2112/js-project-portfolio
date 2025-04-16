@@ -3,8 +3,10 @@ import "./App.css"
 import Header from "./sections/Header"
 import Tech from "./sections/Tech"
 import FeaturedProjects from "./sections/FeaturedProjects"
-import Footer from "./sections/Footer"
 import projects from "./data/projects.json"
+import Skills from "./sections/Skills"
+import skills from "./data/skills.json"
+import Footer from "./sections/Footer"
 
 
 const App = () => {
@@ -13,8 +15,9 @@ const App = () => {
       <Header />
       <Tech />
       <FeaturedProjects 
-        projects={projects.projects}
-        />
+        projects={projects.projects} />
+        <Skills 
+          skills={skills.skills}/>
       <Footer />
     </>
   )

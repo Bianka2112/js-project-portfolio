@@ -15,10 +15,12 @@ const FeaturedProjects = ({ projects }) => {
               text={proj.tags.join(", ")}
               />
             <LinkButton 
+              key={proj.netlify}
               link={proj.netlify}
               linkUse="Live Demo"
               />
             <LinkButton 
+              key={proj.github}
               link={proj.github}
               linkUse="View Code"
               />
