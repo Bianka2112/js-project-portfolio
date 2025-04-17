@@ -1,7 +1,7 @@
 
 export const LinkedinIcon = () => {
   return (
-  <a href="https://www.linkedin.com/in/biankalromero/" target="_blank">
+  <a href="https://www.linkedin.com/in/biankalromero/" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-linkedin"></ion-icon>
   </a>
   )
@@ -9,7 +9,7 @@ export const LinkedinIcon = () => {
 
 export const GithubIcon = () => {
   return (
-  <a href="https://github.com/Bianka2112" target="_blank">
+  <a href="https://github.com/Bianka2112" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-github"></ion-icon>
   </a>
   )
@@ -17,7 +17,7 @@ export const GithubIcon = () => {
 
 export const CodepenIcon = () => {
   return (
-  <a href="https://codepen.io/Bianka2112" target="_blank">
+  <a href="https://codepen.io/Bianka2112" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-codepen"></ion-icon>
   </a>
   )
@@ -25,7 +25,7 @@ export const CodepenIcon = () => {
 
 export const InstagramIcon = () => {
   return (
-  <a href="https://www.instagram.com/biankashoots" target="_blank">
+  <a href="https://www.instagram.com/biankashoots" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-instagram"></ion-icon>
   </a>
   )

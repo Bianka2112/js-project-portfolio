@@ -1,4 +1,4 @@
-import { Button } from "./Button"
+import { Button } from "./ButtonCss"
 
 const LinkButton = ({ link, linkUse, IconComponent, ...props }) => {
   return (
