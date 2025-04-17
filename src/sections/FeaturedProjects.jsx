@@ -18,6 +18,7 @@ const FeaturedProjects = ({ projects }) => {
               text={proj.tags.join(", ")}
               />
             <LinkButton 
+              $primary
               link={proj.netlify}
               linkUse="Live Demo"
               />
