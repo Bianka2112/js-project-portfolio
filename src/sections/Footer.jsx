@@ -11,7 +11,7 @@ const Footer = () => {
         phone="+46(0) 76 716 97 46"
         email="bianka_romero@me.com"
         />
-        {/* <SocialIcons /> */}
+        <SocialIcons />
     </>
   )
 }
