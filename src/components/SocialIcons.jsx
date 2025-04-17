@@ -49,6 +49,7 @@ export const IconsList = {
   codepen: CodepenIcon,
   instagram: InstagramIcon,
   web: WebIcon,
+  heart: HeartIcon,
 }
 
 const SocialIcons = () => {
@@ -58,6 +59,7 @@ return (
     <GithubIcon />
     <CodepenIcon />
     <InstagramIcon />
+    <WebIcon />
     <HeartIcon />
   </div>
   )
