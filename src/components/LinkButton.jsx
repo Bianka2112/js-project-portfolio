@@ -1,10 +1,11 @@
 import { Button } from "./Button"
 
-const LinkButton = ({ link, linkUse, ...props }) => {
+const LinkButton = ({ link, linkUse, IconComponent, ...props }) => {
   return (
     <>
       <a href={link} target="_blank" rel="noopener noreferrer">
-      <Button {...props}>{linkUse}
+      <Button {...props}>{IconComponent && <IconComponent />}
+      {linkUse}
       </Button>
       </a>
     </>

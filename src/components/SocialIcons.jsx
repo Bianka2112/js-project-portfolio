@@ -37,6 +37,20 @@ export const HeartIcon = () => {
   )
 }
 
+export const WebIcon = () => {
+  return (
+  <ion-icon name="globe-outline"></ion-icon>
+  )
+}
+
+export const IconsList = {
+  linkedin: LinkedinIcon,
+  github: GithubIcon,
+  codepen: CodepenIcon,
+  instagram: InstagramIcon,
+  web: WebIcon,
+}
+
 const SocialIcons = () => {
 return (
   <div>
