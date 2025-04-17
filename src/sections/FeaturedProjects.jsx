@@ -1,5 +1,6 @@
 import Card from "../components/Card"
 import LinkButton from "../components/LinkButton"
+import StyleButton from "../components/StyleButton"
 
 
 const FeaturedProjects = ({ projects }) => {
@@ -12,6 +13,9 @@ const FeaturedProjects = ({ projects }) => {
             <Card 
               key={proj.name}
               title={proj.name}
+              text={proj.bio}
+              />
+            <StyleButton 
               text={proj.tags.join(", ")}
               />
             <LinkButton 
