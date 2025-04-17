@@ -9,9 +9,8 @@ const FeaturedProjects = ({ projects }) => {
       <h2>Featured Projects</h2>
       {projects.map((proj) => {
         return (
-          <>
+          <div key={proj.name}>
             <Card 
-              key={proj.name}
               title={proj.name}
               text={proj.bio}
               />
@@ -19,16 +18,14 @@ const FeaturedProjects = ({ projects }) => {
               text={proj.tags.join(", ")}
               />
             <LinkButton 
-              key={proj.netlify}
               link={proj.netlify}
               linkUse="Live Demo"
               />
             <LinkButton 
-              key={proj.github}
               link={proj.github}
               linkUse="View Code"
               />
-          </>
+          </div>
         )
       })}
     </>
