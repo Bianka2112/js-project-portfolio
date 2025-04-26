@@ -4,23 +4,51 @@ import BiankaRomero from "../assets/BiankaRomero.jpg"
 import styled from "styled-components"
 
 const ImageContainer = styled.div`
+  position: relative;
   width: 800px;
   height: auto;
   display: flex;
 `
 
 const HeroImg = styled.img`
-  width: 300px;
-  height: auto;
-  border-radius: 12px;
+  
 `
 
+const RightSideImg = styled.img`
+  /* position: absolute; */
+  right: 50%;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transform: rotate(4.695deg) translate(-50px);
+  z-index: -1;
+`
+const LeftSideImg = styled.img`
+   /* position: absolute; */
+  left: 50%;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transform: rotate(-4.695deg) translate(50px);
+  z-index: -1;
+`
+
+const MainImg = styled.img`
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transform: translate();
+  z-index: 0;
+`
 const HeroImages = () => {
 return (
   <ImageContainer>
-    <HeroImg src={laptopBG} alt="" />
-    <HeroImg src={cameraBG} alt="" />
-    <HeroImg src={BiankaRomero} alt="image of Bianka Romero" />
+    <LeftSideImg src={laptopBG} alt="" />
+    <MainImg src={BiankaRomero} alt="image of Bianka Romero" />
+    <RightSideImg src={cameraBG} alt="" />
   </ImageContainer>
   )
 }

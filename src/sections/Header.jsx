@@ -5,11 +5,11 @@ import HeroImages from "../components/Images"
 const HeroHeader = styled.header`
   width: auto;
   display: flex;
-  height: 1231px;
   padding: 128px 64px 0 64px;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  margin-bottom: 64px;
 `
 
 const Header = () => {
