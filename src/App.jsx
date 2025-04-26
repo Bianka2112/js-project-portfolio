@@ -7,11 +7,13 @@ import projects from "./data/projects.json"
 import Skills from "./sections/Skills"
 import skills from "./data/skills.json"
 import Footer from "./sections/Footer"
+import { GlobalStyle } from "./styles/GlobalStyle"
 
 
 const App = () => {
   return (
     <>
+    <GlobalStyle />
       <Header />
       <Tech />
       <FeaturedProjects 

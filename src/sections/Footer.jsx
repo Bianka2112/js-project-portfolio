@@ -1,9 +1,14 @@
 import Contact from "../components/Contact"
 import SocialIcons from "../components/SocialIcons"
+import styled from "styled-components"
+
+const FooterContainer = styled.footer`
+   
+`
 
 const Footer = () => {
   return (
-    <>
+    <FooterContainer>
       <h3>Let's Connect</h3>
       
       <Contact 
@@ -12,7 +17,7 @@ const Footer = () => {
         email="bianka_romero@me.com"
         />
         <SocialIcons />
-    </>
+    </FooterContainer>
   )
 }
 
