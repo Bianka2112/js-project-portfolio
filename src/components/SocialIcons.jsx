@@ -1,3 +1,11 @@
+import styled from "styled-components"
+
+const IconsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+`
 
 export const LinkedinIcon = () => {
   return (
@@ -54,14 +62,14 @@ export const IconsList = {
 
 const SocialIcons = () => {
 return (
-  <div>
+  <IconsContainer>
     <LinkedinIcon />
     <GithubIcon />
     <CodepenIcon />
     <InstagramIcon />
     <WebIcon />
     <HeartIcon />
-  </div>
+  </IconsContainer>
   )
 }
 

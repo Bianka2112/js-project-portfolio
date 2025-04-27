@@ -2,7 +2,7 @@ import Card from "../components/Card"
 import styled from "styled-components"
 
 const SkillsSection = styled.div`
-  padding: 128px 0px;
+  padding: 64px 16px;
   background: black;
   color: white;
 `
@@ -15,6 +15,9 @@ const SectionTitle = styled.h2`
 const SkillsContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
   justify-content: center;
   gap: 24px;
 `

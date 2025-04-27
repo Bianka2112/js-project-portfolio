@@ -4,19 +4,17 @@ import BiankaRomero from "../assets/BiankaRomero.jpg"
 import styled from "styled-components"
 
 const ImageContainer = styled.div`
-  position: relative;
-  width: 800px;
+  scale: 50%;
   height: auto;
   display: flex;
-`
-
-const HeroImg = styled.img`
-  
+  flex-direction: row;
+  justify-content: center;
+  width: 30%;
+  padding: 16px;
 `
 
 const RightSideImg = styled.img`
-  /* position: absolute; */
-  right: 50%;
+  right: 60%;
   width: 300px;
   height: auto;
   object-fit: cover;
@@ -25,8 +23,7 @@ const RightSideImg = styled.img`
   z-index: -1;
 `
 const LeftSideImg = styled.img`
-   /* position: absolute; */
-  left: 50%;
+  left: 60%;
   width: 300px;
   height: auto;
   object-fit: cover;

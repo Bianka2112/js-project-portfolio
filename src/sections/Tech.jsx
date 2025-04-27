@@ -4,7 +4,7 @@ import styled from "styled-components"
 const TechStyle = styled.div`
   background: black;
   color: white;
-  padding: 128px;
+  padding: 64px 16px;
   text-align: center;
 `
 

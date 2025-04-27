@@ -4,17 +4,17 @@ import styled from "styled-components"
 import BiankaRomero from "../assets/BiankaRomero.jpg"
 
 const FooterContainer = styled.footer`
-  padding: 128px;
-  text-align: center;
+  padding: 64px 16px;
 `
 const CircleImg = styled.img`
   width: 164px;
   height: 164px;
   border-radius: 164px;
   object-fit: cover;
+  align-self: center;
 `
 const FooterTitle = styled.h3`
-  padding-bottom: 40px;
+  text-align: center;
 `
 
 const Footer = () => {

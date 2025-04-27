@@ -4,13 +4,17 @@ import StyleButton from "../components/StyleButton"
 import { IconsList } from "../components/SocialIcons"
 import styled from "styled-components"
 
+const FeaturedSection = styled.section`
+  padding: 64px 16px;
+`
+
 const SectionTitle = styled.h2`
   text-align: center;
 `
 
 const FeaturedProjects = ({ projects }) => {
   return (
-    <>
+    <FeaturedSection>
       <SectionTitle>Featured Projects</SectionTitle>
       {projects.map((proj) => {
         return (
@@ -36,7 +40,7 @@ const FeaturedProjects = ({ projects }) => {
           </div>
         )
       })}
-    </>
+    </FeaturedSection>
   )
 }
 
