@@ -7,7 +7,7 @@ const TagsContainer = styled.ul`
  
 `
 const CardTitle = styled.h2`
-  text-align: center;
+ 
 `
 
 const Card = ({ title, text, tags, TitleComponent = CardTitle }) => {

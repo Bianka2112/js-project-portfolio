@@ -6,14 +6,20 @@ const SkillsSection = styled.div`
   padding: 64px 16px;
   background: black;
   color: white;
+  gap: 16px;
+
+  @media ${media.desktop} {
+    padding: 128px 0;
+  }
 `
 
 const SectionTitle = styled.h2`
+  font-size: 48px;
   padding-bottom: 40px;
   text-align: center;
 
-  @media ${media.tablet} {
-    font-size: 32px;
+  @media ${media.desktop} {
+    font-size: 80px;
   }
 `
 
@@ -35,7 +41,11 @@ const SkillsContainer = styled.section`
   }
 
   @media ${media.desktop} {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    width: 100%;
+    justify-items: center;
   }
 `
 
@@ -47,14 +57,15 @@ const Skills = ({ skills }) => {
       {skills.map((skill) => {
         return (
             <Card
+              // TitleComponent={SkillsTitle}
               key={skill.category}
               title={skill.category}
               tags={skill.tags}
-              />
-      )
-    })
-  }
-          </SkillsContainer>
+            />
+          )
+        })
+      }
+      </SkillsContainer>
     </SkillsSection>
   )
 }
