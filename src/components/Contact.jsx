@@ -1,9 +1,7 @@
 import styled from "styled-components"
 
 const ContactContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: block;
   padding: 64px 0;
 `
 
