@@ -21,6 +21,14 @@ const HeroHeader = styled.header`
   }
 `
 
+const TopLine = styled.h3`
+  font-size: 24px;
+
+  @media ${media.desktop} {
+    font-size: 30px;
+  }
+`
+
 const HeroName = styled.h1`
   font-size: 52px;
 
@@ -29,21 +37,23 @@ const HeroName = styled.h1`
   }
 `
 
-const h3 = styled.h3`
-  font-size: 24px;
+const HeaderTitle = styled.h2`
+  font-size: 20px;
 
-  @media ${media.desktop} {
+  @media ${media.tablet}, ${media.desktop} {
     font-size: 30px;
   }
 `
 
+
 const Header = () => {
   return (
     <HeroHeader>
-      <h3>Hi there, I'm</h3>
+      <TopLine>Hi there, I'm</TopLine>
       <HeroName>Bianka L Romero</HeroName>
       <HeroImages />
       <Card 
+        TitleComponent={HeaderTitle}
         title="Web Developer + Photographer"
         text="A creative dev with a background in studio and live photography. I’m passionate about blending code and visuals to craft immersive, accessible digital experiences. Seeking full-time opportunities where I can bring both creative and technical energy. Fluent in English, Spanish and GIFs; torrent-loading Swedish, please wait."
       />
