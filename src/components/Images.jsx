@@ -2,15 +2,20 @@ import laptopBG from "../assets/laptop-BG.jpg"
 import cameraBG from "../assets/camera-BG.jpg"
 import BiankaRomero from "../assets/BiankaRomero.jpg"
 import styled from "styled-components"
+import { media } from "../styles/media"
 
-const ImageContainer = styled.div`
-  scale: 50%;
+const HeroContainer = styled.div`
+  /* scale: 50%; */
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 30%;
+  width: 100%;
   padding: 16px;
+
+  @media ${media.tablet} {
+    width: 80%;
+  }
 `
 
 const RightSideImg = styled.img`
@@ -42,11 +47,11 @@ const MainImg = styled.img`
 `
 const HeroImages = () => {
 return (
-  <ImageContainer>
+  <HeroContainer>
     <LeftSideImg src={laptopBG} alt="" />
     <MainImg src={BiankaRomero} alt="image of Bianka Romero" />
     <RightSideImg src={cameraBG} alt="" />
-  </ImageContainer>
+  </HeroContainer>
   )
 }
 

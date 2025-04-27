@@ -3,6 +3,7 @@ import LinkButton from "../components/LinkButton"
 import StyleButton from "../components/StyleButton"
 import { IconsList } from "../components/SocialIcons"
 import styled from "styled-components"
+import { media } from "../styles/media"
 
 const FeaturedSection = styled.section`
   padding: 64px 16px;

@@ -11,15 +11,37 @@ const HeroHeader = styled.header`
   text-align: center;
 
   @media ${media.tablet} {
-    
+    padding: 64px 24px;
+  }
+
+  @media ${media.desktop} {
+    padding: 64px 0;
+    max-width: 782px;
+    margin: 0 auto;
+  }
+`
+
+const HeroName = styled.h1`
+  font-size: 52px;
+
+  @media ${media.desktop} {
+    font-size: 100px;
+  }
+`
+
+const h3 = styled.h3`
+  font-size: 24px;
+
+  @media ${media.desktop} {
+    font-size: 30px;
   }
 `
 
 const Header = () => {
   return (
     <HeroHeader>
-      <h3>Hi, I'm</h3>
-      <h1>Bianka L Romero</h1>
+      <h3>Hi there, I'm</h3>
+      <HeroName>Bianka L Romero</HeroName>
       <HeroImages />
       <Card 
         title="Web Developer + Photographer"
