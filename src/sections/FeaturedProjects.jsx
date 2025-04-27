@@ -2,12 +2,16 @@ import Card from "../components/Card"
 import LinkButton from "../components/LinkButton"
 import StyleButton from "../components/StyleButton"
 import { IconsList } from "../components/SocialIcons"
+import styled from "styled-components"
 
+const SectionTitle = styled.h2`
+  text-align: center;
+`
 
 const FeaturedProjects = ({ projects }) => {
   return (
     <>
-      <h2>Featured Projects</h2>
+      <SectionTitle>Featured Projects</SectionTitle>
       {projects.map((proj) => {
         return (
           <div key={proj.name}>

@@ -3,7 +3,7 @@ import SocialIcons from "../components/SocialIcons"
 import styled from "styled-components"
 
 const FooterContainer = styled.footer`
-   
+   text-align: center;
 `
 
 const Footer = () => {

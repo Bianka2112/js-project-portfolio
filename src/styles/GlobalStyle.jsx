@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
+import { media } from "./media"
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -20,4 +21,5 @@ export const GlobalStyle = createGlobalStyle`
      text-decoration: none;
      color: inherit;
    }
+
 `

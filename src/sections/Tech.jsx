@@ -5,6 +5,7 @@ const TechStyle = styled.div`
   background: black;
   color: white;
   padding: 128px;
+  text-align: center;
 `
 
 const Tech = () => {

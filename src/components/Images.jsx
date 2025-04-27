@@ -21,7 +21,7 @@ const RightSideImg = styled.img`
   height: auto;
   object-fit: cover;
   border-radius: 12px;
-  transform: rotate(4.695deg) translate(-50px);
+  transform: rotate(4.7deg) translate(-50px);
   z-index: -1;
 `
 const LeftSideImg = styled.img`
@@ -31,7 +31,7 @@ const LeftSideImg = styled.img`
   height: auto;
   object-fit: cover;
   border-radius: 12px;
-  transform: rotate(-4.695deg) translate(50px);
+  transform: rotate(-4.7deg) translate(50px);
   z-index: -1;
 `
 

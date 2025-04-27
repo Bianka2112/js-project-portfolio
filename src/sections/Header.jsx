@@ -10,6 +10,7 @@ const HeroHeader = styled.header`
   align-items: center;
   gap: 16px;
   margin-bottom: 64px;
+  text-align: center;
 `
 
 const Header = () => {
