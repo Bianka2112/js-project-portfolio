@@ -6,9 +6,11 @@ const Tag = styled.li`
 const TagsContainer = styled.ul`
  
 `
+const CardTitle = styled.h2`
+  text-align: center;
+`
 
-const Card = ({ title, text, tags }) => {
-  console.log('Card text prop:', text)
+const Card = ({ title, text, tags, TitleComponent = CardTitle }) => {
    const cardContent = 
     tags ? (
       <TagsContainer>
@@ -22,7 +24,7 @@ const Card = ({ title, text, tags }) => {
   
   return (
     <article>
-      <h2>{title}</h2>
+      <TitleComponent>{title}</TitleComponent>
       {cardContent}
     </article>
   )

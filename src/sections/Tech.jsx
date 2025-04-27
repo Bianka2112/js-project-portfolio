@@ -8,10 +8,11 @@ const TechSection = styled.div`
   padding: 64px 16px;
   text-align: center;
 
-  @media ${media.tablet} {
-      width: 100%;
-      
-    }
+  @media ${media.desktop} {
+    padding: 128px 0;
+    max-width: 782px;
+    margin: 0 auto;
+  }
 `
 
 const Tech = () => {
