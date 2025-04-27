@@ -1,5 +1,6 @@
 import Card from "../components/Card"
 import styled from "styled-components"
+import { media } from "../styles/media"
 
 const SkillsSection = styled.div`
   padding: 64px 16px;
@@ -10,6 +11,10 @@ const SkillsSection = styled.div`
 const SectionTitle = styled.h2`
   padding-bottom: 40px;
   text-align: center;
+
+  @media ${media.tablet} {
+    font-size: 32px;
+  }
 `
 
 const SkillsContainer = styled.section`
@@ -20,6 +25,14 @@ const SkillsContainer = styled.section`
   align-self: stretch;
   justify-content: center;
   gap: 24px;
+
+  @media ${media.tablet} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    width: 100%;
+    justify-items: center;
+    }
 `
 
 const Skills = ({ skills }) => {

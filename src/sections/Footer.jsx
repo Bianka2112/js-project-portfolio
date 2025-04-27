@@ -2,6 +2,7 @@ import Contact from "../components/Contact"
 import SocialIcons from "../components/SocialIcons"
 import styled from "styled-components"
 import BiankaRomero from "../assets/BiankaRomero.jpg"
+import { media } from "../styles/media"
 
 const FooterContainer = styled.footer`
   padding: 64px 16px;
@@ -14,6 +15,14 @@ const FooterContainer = styled.footer`
 const FooterTitle = styled.h3`
   text-align: center;
   margin-bottom: 16px;
+
+  @media ${media.tablet} {
+    font-size: 48px;
+  }
+
+  @media ${media.desktop} {
+    font-size: 80px;
+  }
 `
 
 const CircleImg = styled.img`

@@ -1,16 +1,18 @@
 import Card from "../components/Card"
 import styled from "styled-components"
 import HeroImages from "../components/Images"
+import { media } from "../styles/media"
 
 const HeroHeader = styled.header`
-  width: auto;
   display: flex;
   padding: 64px 16px;
   flex-direction: column;
   align-items: center;
-  /* gap: 16px;
-  margin-bottom: 64px; */
   text-align: center;
+
+  @media ${media.tablet} {
+    width: 800px;
+  }
 `
 
 const Header = () => {

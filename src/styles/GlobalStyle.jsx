@@ -10,8 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Poppins", "Arial", sans-serif;
-    min-width: auto;
-    max-width: 800px;
+    width: 100%;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
