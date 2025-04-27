@@ -2,52 +2,67 @@ import styled from "styled-components"
 
 const IconsContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+`
 
+const SocialIcon = styled.a`
+  font-size: 32px;
+  color: inherit;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `
 
 export const LinkedinIcon = () => {
   return (
-  <a href="https://www.linkedin.com/in/biankalromero/" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://www.linkedin.com/in/biankalromero/" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-linkedin"></ion-icon>
-  </a>
+  </SocialIcon>
   )
 }
 
 export const GithubIcon = () => {
   return (
-  <a href="https://github.com/Bianka2112" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://github.com/Bianka2112" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-github"></ion-icon>
-  </a>
+  </SocialIcon>
   )
 }
 
 export const CodepenIcon = () => {
   return (
-  <a href="https://codepen.io/Bianka2112" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://codepen.io/Bianka2112" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-codepen"></ion-icon>
-  </a>
+  </SocialIcon>
   )
 }
 
 export const InstagramIcon = () => {
   return (
-  <a href="https://www.instagram.com/biankashoots" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://www.instagram.com/biankashoots" target="_blank" rel="noopener noreferrer">
   <ion-icon name="logo-instagram"></ion-icon>
-  </a>
+  </SocialIcon>
   )
 }
 
 export const HeartIcon = () => {
   return (
-  <ion-icon name="heart"></ion-icon>
+    <SocialIcon>
+      <ion-icon name="heart"></ion-icon>
+    </SocialIcon>
   )
 }
 
 export const WebIcon = () => {
   return (
-  <ion-icon name="globe-outline"></ion-icon>
+    <SocialIcon>
+      <ion-icon name="globe-outline"></ion-icon>
+    </SocialIcon>
   )
 }
 
