@@ -32,7 +32,11 @@ const SkillsContainer = styled.section`
     gap: 24px;
     width: 100%;
     justify-items: center;
-    }
+  }
+
+  @media ${media.desktop} {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 `
 
 const Skills = ({ skills }) => {

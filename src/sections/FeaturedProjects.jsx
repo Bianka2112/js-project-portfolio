@@ -10,6 +10,11 @@ const FeaturedSection = styled.section`
 
 const SectionTitle = styled.h2`
   text-align: center;
+  font-size: 48px;
+
+  @media ${media.desktop} {
+    font-size: 80px;
+  }
 `
 
 const FeaturedProjects = ({ projects }) => {

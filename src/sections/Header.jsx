@@ -11,7 +11,7 @@ const HeroHeader = styled.header`
   text-align: center;
 
   @media ${media.tablet} {
-    width: 800px;
+    
   }
 `
 
