@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { media } from "../styles/media"
 
 const HeroContainer = styled.div`
-  /* height: auto; */
   min-width: 300px;
   width: 100%;
   display: flex;
@@ -15,28 +14,41 @@ const HeroContainer = styled.div`
 
 `
 const HeroImg = styled.img`
-  width: 30%; /* 🚨 About 1/3rd of container, adjust a bit for gaps */
+  width: 30%;
   height: auto;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  transition: transform 0.3s ease;
 
-  @media ${media.tablet}, ${media.desktop} {
+  @media ${media.tablet} {
     width: 300px;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+    }
   }
 `
 
 const LeftHeroImg = styled(HeroImg)`
-  transform: rotate(-4.7deg) translate(50px);
+  transform: rotate(-4.7deg) translateX(50px);
   z-index: -1;
 `
 
 const CenterHeroImg = styled(HeroImg)`
   z-index: 0;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `
 
 const RightHeroImg = styled(HeroImg)`
-  transform: rotate(4.7deg) translate(-50px);
+  transform: rotate(4.7deg) translateX(-50px);
   z-index: -1;
 `
 
