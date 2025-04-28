@@ -18,19 +18,23 @@ const SectionTitle = styled.h2`
   }
 `
 
+const ProjectsContainer = styled.div`
+  padding: 64px 16px;
+`
+
 const FeaturedProjects = ({ projects }) => {
   return (
     <FeaturedSection>
       <SectionTitle>Featured Projects</SectionTitle>
       {projects.map((proj) => {
         return (
-          <div key={proj.name}>
+          <ProjectsContainer key={proj.name}>
             <Card 
               title={proj.name}
               text={proj.bio}
               />
             <StyleButton 
-              text={proj.tags.join(", ")}
+              tags={proj.tags}
               />
             <LinkButton 
               $primary
@@ -43,7 +47,7 @@ const FeaturedProjects = ({ projects }) => {
               IconComponent={IconsList.github}
               linkUse="View Code"
               />
-          </div>
+          </ProjectsContainer>
         )
       })}
     </FeaturedSection>
