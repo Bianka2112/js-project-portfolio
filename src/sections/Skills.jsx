@@ -27,7 +27,7 @@ const SkillsContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: flex-start;
+  align-content: start;
   align-self: stretch;
   justify-content: center;
   gap: 24px;
@@ -49,6 +49,16 @@ const SkillsContainer = styled.section`
   }
 `
 
+const SkillTagTitles = styled.h4`
+  border-radius: 4px;
+  border: 1px solid #FFF;
+  background: #000;
+  padding: 2px 6px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+`
+
 const Skills = ({ skills }) => {
   return (
     <SkillsSection>
@@ -57,7 +67,7 @@ const Skills = ({ skills }) => {
       {skills.map((skill) => {
         return (
             <Card
-              // TitleComponent={SkillsTitle}
+              TitleComponent={SkillTagTitles}
               key={skill.category}
               title={skill.category}
               tags={skill.tags}
