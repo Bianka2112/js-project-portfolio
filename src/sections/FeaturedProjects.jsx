@@ -1,6 +1,6 @@
 import Card from "../components/Card"
 import LinkButton from "../components/LinkButton"
-import StyleButton from "../components/StyleButton"
+import StyleButton from "../components/StyledTags"
 import { IconsList } from "../components/SocialIcons"
 import styled from "styled-components"
 import { media } from "../styles/media"

@@ -1,8 +1,14 @@
 import styled from "styled-components"
+import { media } from "../styles/media"
 
 const TagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media ${media.desktop} {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 `
 
 const TechTags = styled.p`
