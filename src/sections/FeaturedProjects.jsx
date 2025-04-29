@@ -20,6 +20,11 @@ const SectionTitle = styled.h2`
 
 const ProjectsContainer = styled.div`
   padding: 64px 16px;
+  gap: 16px;
+`
+
+const LinkContainer = styled.div`
+  gap: 8px;
 `
 
 const FeaturedProjects = ({ projects }) => {
@@ -36,17 +41,19 @@ const FeaturedProjects = ({ projects }) => {
             <StyleButton 
               tags={proj.tags}
               />
-            <LinkButton 
-              $primary
-              link={proj.netlify}
-              IconComponent={IconsList.web}
-              linkUse="Live Demo"
-              />
-            <LinkButton 
-              link={proj.github}
-              IconComponent={IconsList.github}
-              linkUse="View Code"
-              />
+            <LinkContainer>
+              <LinkButton 
+                $primary
+                link={proj.netlify}
+                IconComponent={IconsList.web}
+                linkUse="Live Demo"
+                />
+              <LinkButton 
+                link={proj.github}
+                IconComponent={IconsList.github}
+                linkUse="View Code"
+                />
+            </LinkContainer>
           </ProjectsContainer>
         )
       })}

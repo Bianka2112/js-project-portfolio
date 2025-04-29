@@ -5,8 +5,9 @@ import styled from "styled-components"
 import { media } from "../styles/media"
 
 const HeroContainer = styled.div`
-  min-width: 300px;
+  max-width: 100vw;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   padding: 16px;
@@ -16,6 +17,7 @@ const HeroContainer = styled.div`
 const HeroImg = styled.img`
   width: 30%;
   height: auto;
+  max-width: 100%;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -24,7 +26,7 @@ const HeroImg = styled.img`
   transition: transform 0.3s ease;
 
   @media ${media.tablet} {
-    width: 300px;
+    /* max-width: 100%; */
   }
 
   @keyframes fadeUp {
