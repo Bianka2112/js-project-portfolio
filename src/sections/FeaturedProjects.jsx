@@ -59,13 +59,14 @@ const FeaturedProjects = ({ projects }) => {
       {projects.map((proj) => {
         return (
           <ProjectsContainer key={proj.name}>
+            <img src={proj.image} alt={`${proj.name} screenshot`}/>
+            <StyleButton 
+              tags={proj.tags}
+              />
             <Card 
               TitleComponent={ProjTitle}
               title={proj.name}
               text={proj.bio}
-              />
-            <StyleButton 
-              tags={proj.tags}
               />
             <LinkContainer>
               <LinkButton 

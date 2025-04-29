@@ -5,7 +5,7 @@ const TagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  @media ${media.desktop} {
+  @media ${media.tablet}, ${media.desktop} {
     display: flex;
     flex-wrap: nowrap;
   }
