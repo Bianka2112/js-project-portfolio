@@ -25,10 +25,6 @@ const HeroImg = styled.img`
   animation: fadeUp 1s ease forwards;
   transition: transform 0.3s ease;
 
-  @media ${media.tablet} {
-    /* max-width: 100%; */
-  }
-
   @keyframes fadeUp {
     to {
       opacity: 1;

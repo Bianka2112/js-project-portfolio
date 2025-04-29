@@ -7,6 +7,14 @@ import { media } from "../styles/media"
 
 const FeaturedSection = styled.section`
   padding: 64px 16px;
+
+  @media ${media.tablet} {
+    padding: 64px 24px;
+  }
+  
+  @media ${media.desktop} {
+    padding: 128px;
+  }
 `
 
 const SectionTitle = styled.h2`
@@ -19,11 +27,19 @@ const SectionTitle = styled.h2`
 `
 
 const ProjectsContainer = styled.div`
-  padding: 64px 16px;
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+  gap: 32px;
+
+  @media ${media.desktop} {
+    padding-top: 128px;
+  }
 `
 
 const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 `
 

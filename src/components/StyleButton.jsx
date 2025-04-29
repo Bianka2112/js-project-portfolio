@@ -2,8 +2,7 @@ import styled from "styled-components"
 
 const TagsContainer = styled.div`
   display: flex;
-  flex-wrap: nowrap;
-
+  flex-wrap: wrap;
 `
 
 const TechTags = styled.p`
