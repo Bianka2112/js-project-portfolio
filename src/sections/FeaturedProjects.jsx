@@ -28,6 +28,29 @@ const SectionTitle = styled.h2`
 
 const ProjectsContainer = styled.div`
   display: flex;
+  flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 64px;
+  gap: 32px;
+
+  @media ${media.desktop} {
+    padding-top: 128px;
+    /* width: 580px; */
+  }
+`
+
+const ProjectImage = styled.img`
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  margin-bottom: 1rem;
+`
+
+const ProjectsTextContainer = styled.div`
+  display: flex;
   flex-direction: column;
   padding-top: 64px;
   gap: 32px;
@@ -56,10 +79,16 @@ const FeaturedProjects = ({ projects }) => {
   return (
     <FeaturedSection>
       <SectionTitle>Featured Projects</SectionTitle>
-      {projects.map((proj) => {
+
+      {projects.map((proj, index) => {
+        const isEven = index % 2 === 0;
         return (
-          <ProjectsContainer key={proj.name}>
-            <img src={proj.image} alt={`${proj.name} screenshot`}/>
+          <ProjectsContainer key={proj.name} reverse={!isEven}>
+            <ProjectImage 
+              src={proj.image} 
+              alt={`${proj.name} screenshot`}/>
+
+            <ProjectsTextContainer>
             <StyleButton 
               tags={proj.tags}
               />
@@ -81,6 +110,7 @@ const FeaturedProjects = ({ projects }) => {
                 linkUse="View Code"
                 />
             </LinkContainer>
+                </ProjectsTextContainer>
           </ProjectsContainer>
         )
       })}
