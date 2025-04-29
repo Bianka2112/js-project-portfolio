@@ -34,6 +34,15 @@ const ProjectsContainer = styled.div`
 
   @media ${media.desktop} {
     padding-top: 128px;
+    width: 580px;
+  }
+`
+
+const ProjTitle = styled.h3`
+  font-size: 24px;
+
+  @media ${media.desktop} {
+    font-size: 30px;
   }
 `
 
@@ -51,6 +60,7 @@ const FeaturedProjects = ({ projects }) => {
         return (
           <ProjectsContainer key={proj.name}>
             <Card 
+              TitleComponent={ProjTitle}
               title={proj.name}
               text={proj.bio}
               />
