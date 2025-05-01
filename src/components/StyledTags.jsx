@@ -18,7 +18,6 @@ const TechTags = styled.p`
 
   @media ${media.tablet}, ${media.desktop} {
     flex: 1 0 0; 
-    
 }
 `
 
