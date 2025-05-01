@@ -1,14 +1,11 @@
 import styled from "styled-components"
-import { media } from "../styles/media"
+// import { media } from "../styles/media"
 
 const Tag = styled.li`
   display: block;
 `
 const TagsContainer = styled.ul`
- @media ${media.tablet} {
-  align-self: stretch;
-  text-align: center;
- }
+ 
 `
 const CardTitle = styled.h2`
  

@@ -31,23 +31,29 @@ const SkillsContainer = styled.section`
   flex-wrap: wrap;
   flex-direction: column;
   align-content: start;
-  align-self: stretch;
   justify-content: center;
   gap: 24px;
 
-  @media ${media.tablet} {
+  @media (min-width: 426px) {
     align-content: center;
     gap: 24px;
     width: 100%;
     justify-items: center;
+
+    & ul li {
+      align-self: stretch;
+      text-align: center;
+    }
   }
 
   @media ${media.desktop} {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
     width: 100%;
     justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 `
 
