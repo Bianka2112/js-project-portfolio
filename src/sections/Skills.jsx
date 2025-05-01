@@ -8,6 +8,9 @@ const SkillsSection = styled.div`
   color: white;
   gap: 16px;
 
+  @media ${media.tablet} {
+    padding: 64px 24px;
+  }
   @media ${media.desktop} {
     padding: 128px 0;
   }
@@ -33,8 +36,7 @@ const SkillsContainer = styled.section`
   gap: 24px;
 
   @media ${media.tablet} {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-content: center;
     gap: 24px;
     width: 100%;
     justify-items: center;
