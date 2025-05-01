@@ -30,14 +30,17 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* align-items: center; */
-  /* justify-content: center; */
+  align-items: center;
+  justify-content: center;
   padding-top: 64px;
 
   @media ${media.desktop} {
     flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+    flex-wrap: nowrap;
     padding-top: 128px;
     gap: 125px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 `
 
@@ -47,6 +50,12 @@ const ProjectImage = styled.img`
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+
+  @media ${media.desktop} {
+    width: 50%;
+    /* max-width: 540px; */
+    height: auto;
+  }
 `
 
 const ProjectsTextContainer = styled.div`
@@ -57,11 +66,14 @@ const ProjectsTextContainer = styled.div`
   padding-top: 64px;
   gap: 32px;
 
-  @media ${media.tablet}, ${media.desktop} {
-    max-width: 580px;
+  @media ${media.tablet}{
+    min-width: 580px;
   }
+
   @media ${media.desktop} {
+    width: 50%;
     padding: 0;
+    flex-shrink: 1;
   }
 `
 
