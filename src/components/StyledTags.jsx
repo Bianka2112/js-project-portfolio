@@ -4,21 +4,22 @@ import { media } from "../styles/media"
 const TagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-
-  @media ${media.tablet}, ${media.desktop} {
-    display: flex;
-    flex-wrap: nowrap;
-  }
 `
 
 const TechTags = styled.p`
   border-radius: 4px;
-  width: 130px;
+  max-width: 100%;
   color: black;
   border: 1px solid black;
   padding: 2px 6px;
   display: flex;
   justify-content: center;
+  white-space: nowrap;
+
+  @media ${media.tablet}, ${media.desktop} {
+    flex: 1 0 0; 
+    
+}
 `
 
 const StyleButton = ({ tags }) => {

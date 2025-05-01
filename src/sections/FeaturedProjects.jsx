@@ -28,15 +28,16 @@ const SectionTitle = styled.h2`
 
 const ProjectsContainer = styled.div`
   display: flex;
-  flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   padding-top: 64px;
-  gap: 32px;
 
   @media ${media.desktop} {
+    flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
     padding-top: 128px;
-    /* width: 580px; */
+    gap: 125px;
   }
 `
 
@@ -46,18 +47,21 @@ const ProjectImage = styled.img`
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  margin-bottom: 1rem;
 `
 
 const ProjectsTextContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 100%;
   padding-top: 64px;
   gap: 32px;
 
+  @media ${media.tablet}, ${media.desktop} {
+    max-width: 580px;
+  }
   @media ${media.desktop} {
-    padding-top: 128px;
-    width: 580px;
+    padding: 0;
   }
 `
 

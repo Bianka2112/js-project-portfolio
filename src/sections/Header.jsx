@@ -1,6 +1,6 @@
 import Card from "../components/Card"
 import styled from "styled-components"
-import HeroImages from "../components/Images"
+import HeroImages from "../components/HeroImages"
 import { media } from "../styles/media"
 
 const HeroHeader = styled.header`
