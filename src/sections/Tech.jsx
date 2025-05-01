@@ -9,6 +9,9 @@ const TechSection = styled.div`
   text-align: center;
   width: 100%;
 
+  @media ${media.tablet} {
+    padding: 64px 24px;
+  }
   @media ${media.desktop} {
     padding: 128px 0;
   }
