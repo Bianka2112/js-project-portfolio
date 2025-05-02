@@ -102,9 +102,10 @@ const FeaturedProjects = ({ projects }) => {
           <ProjectsContainer key={proj.name} reverse={!isEven}>
             <ProjectImage 
               src={proj.image} 
-              alt={`${proj.name} screenshot`}/>
+              alt={`${proj.name} screenshot`}
+              className="slide-in-left"/>
 
-            <ProjectsTextContainer>
+            <ProjectsTextContainer className="slide-in-right">
             <StyleButton 
               tags={proj.tags}
               />

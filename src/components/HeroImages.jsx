@@ -1,8 +1,8 @@
 import laptopBG from "../assets/laptop-BG.jpg"
 import cameraBG from "../assets/camera-BG.jpg"
 import BiankaRomero from "../assets/BiankaRomero.jpg"
-import styled from "styled-components"
-import { media } from "../styles/media"
+import styled, { keyframes } from "styled-components"
+
 
 const HeroContainer = styled.div`
   max-width: 100vw;
@@ -21,23 +21,50 @@ const HeroImg = styled.img`
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
-  transition: transform 0.3s ease;
+`
 
-  @keyframes fadeUp {
-    to {
-      opacity: 1;
-    }
+const fadeUpCenter = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 `
 
+
+const slideInLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: rotate(-4.7deg) translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-4.7deg) translateX(50px);
+  }
+`
+
+const slideInRight = keyframes`
+  from {
+    opacity: 0;
+    transform: rotate(4.7deg) translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(4.7deg) translateX(-50px);
+  }
+`
+
+
 const LeftHeroImg = styled(HeroImg)`
-  transform: rotate(-4.7deg) translateX(50px);
+  animation: ${slideInLeft} 1s ease forwards;
   z-index: -1;
 `
 
 const CenterHeroImg = styled(HeroImg)`
+  animation: ${fadeUpCenter} 1s ease forwards;
   z-index: 0;
 
   &:hover {
@@ -46,7 +73,7 @@ const CenterHeroImg = styled(HeroImg)`
 `
 
 const RightHeroImg = styled(HeroImg)`
-  transform: rotate(4.7deg) translateX(-50px);
+  animation: ${slideInRight} 1s ease forwards;
   z-index: -1;
 `
 
