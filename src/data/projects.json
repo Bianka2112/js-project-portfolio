@@ -3,7 +3,7 @@
     {
       "name": "Weather app",
       "bio": "An interactive weather app that fetches current API data for today and a 4-day forecast. The app theme shifts with the time of day from daytime to nighttime colors and icons using Typescript/Javascript. ",
-      "image": "./public/images/weather-app.png",
+      "image": "/images/weather-app.png",
       "tags": [
         "HTML5",
         "CSS3",
@@ -17,7 +17,7 @@
     {
       "name": "Accessibility For All",
       "bio": "An easy to navigate, WCAG [AAA] rated site design, that offers users a quick and informative quiz on accessibility-friendly, aka a11y, guidelines.",
-      "image": "./public/images/a11y-app.png",
+      "image": "/images/a11y-app.png",
       "tags": [
         "HTML5",
         "CSS3",
@@ -30,7 +30,7 @@
     {
       "name": "Recipe Library app",
       "bio": "Simple and clean app for getting fresh recipe inspirations. Users can choose popular cuisine filters or sort by time to narrow the options, as well as a fun, random recipe button. Almost entirely Javascript-built for functionality and features. ",
-      "image": "./public/images/recipe-library-app.png",
+      "image": "/images/recipe-library-app.png",
       "tags": [
         "HTML5",
         "CSS3",
@@ -44,7 +44,7 @@
     {
       "name": "First self-coded project: The Stockholm Buzz",
       "bio": "My original homemade, from scratch, business-inspired website fully coded with HTML and CSS and just a few tears (whether from joy, panic or relief remains a trade-secret). Updated to meet WCAG standards for an accessible user experience. ",
-      "image": "./public/images/stockholm-buzz-app.png",
+      "image": "/images/stockholm-buzz-app.png",
       "tags": [
         "HTML5",
         "CSS3",
