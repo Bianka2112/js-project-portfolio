@@ -10,6 +10,10 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  @media ${media.desktop} {
+    padding: 128px 16px;
+  }
 `
 
 const FooterTitle = styled.h3`

@@ -15,7 +15,8 @@ const HeroHeader = styled.header`
   }
 
   @media ${media.desktop} {
-    padding: 64px 0;
+    padding-top: 128px;
+    padding-bottom: 64px;
     max-width: 782px;
     margin: 0 auto;
   }
