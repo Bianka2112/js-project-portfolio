@@ -20,7 +20,7 @@ const SocialIcon = styled.a`
 
 export const LinkedinIcon = () => {
   return (
-  <SocialIcon href="https://www.linkedin.com/in/biankalromero/" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://www.linkedin.com/in/biankalromero/" target="_blank" rel="noopener noreferrer" alt="Link to LinkedIn profile">
   <ion-icon name="logo-linkedin"></ion-icon>
   </SocialIcon>
   )
@@ -28,7 +28,7 @@ export const LinkedinIcon = () => {
 
 export const GithubIcon = () => {
   return (
-  <SocialIcon href="https://github.com/Bianka2112" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://github.com/Bianka2112" target="_blank" rel="noopener noreferrer" alt="Link to Github profile">
   <ion-icon name="logo-github"></ion-icon>
   </SocialIcon>
   )
@@ -36,7 +36,7 @@ export const GithubIcon = () => {
 
 export const CodepenIcon = () => {
   return (
-  <SocialIcon href="https://codepen.io/Bianka2112" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://codepen.io/Bianka2112" target="_blank" rel="noopener noreferrer" alt="Link to Codepen profile">
   <ion-icon name="logo-codepen"></ion-icon>
   </SocialIcon>
   )
@@ -44,7 +44,7 @@ export const CodepenIcon = () => {
 
 export const InstagramIcon = () => {
   return (
-  <SocialIcon href="https://www.instagram.com/biankashoots" target="_blank" rel="noopener noreferrer">
+  <SocialIcon href="https://www.instagram.com/biankashoots" target="_blank" rel="noopener noreferrer" alt="Link to Instagram profile">
   <ion-icon name="logo-instagram"></ion-icon>
   </SocialIcon>
   )
@@ -52,7 +52,7 @@ export const InstagramIcon = () => {
 
 export const HeartIcon = () => {
   return (
-    <SocialIcon>
+    <SocialIcon aria-hidden>
       <ion-icon name="heart"></ion-icon>
     </SocialIcon>
   )
@@ -60,7 +60,7 @@ export const HeartIcon = () => {
 
 export const WebIcon = () => {
   return (
-    <SocialIcon>
+    <SocialIcon href="https://www.biankaromero.com." target="_blank" rel="noopener noreferrer" alt="Link to Photography portfolio">
       <ion-icon name="globe-outline"></ion-icon>
     </SocialIcon>
   )
