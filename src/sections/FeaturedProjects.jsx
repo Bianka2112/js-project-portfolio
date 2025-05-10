@@ -1,6 +1,6 @@
 import Card from "../components/Card"
 import LinkButton from "../components/LinkButton"
-import StyleButton from "../components/StyledTags"
+import StyledTags from "../components/StyledTags"
 import { IconsList } from "../components/SocialIcons"
 import styled from "styled-components"
 import { media } from "../styles/media"
@@ -106,7 +106,7 @@ const FeaturedProjects = ({ projects }) => {
               className="slide-in-left"/>
 
             <ProjectsTextContainer className="slide-in-right">
-            <StyleButton 
+            <StyledTags 
               tags={proj.tags}
               />
             <Card 

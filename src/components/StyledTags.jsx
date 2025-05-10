@@ -15,13 +15,14 @@ const TechTags = styled.p`
   display: flex;
   justify-content: center;
   white-space: nowrap;
+  margin: 4px;
 
   @media ${media.tablet}, ${media.desktop} {
     flex: 1 0 0; 
 }
 `
 
-const StyleButton = ({ tags }) => {
+const StyledTags = ({ tags }) => {
   return (
     <TagsContainer>
       {tags.map((tag, index) => {
@@ -33,4 +34,4 @@ const StyleButton = ({ tags }) => {
   )
 }
 
-export default StyleButton
+export default StyledTags
