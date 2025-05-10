@@ -12,7 +12,15 @@ const TagsContainer = styled.ul`
  
 `
 const CardTitle = styled.h2`
- 
+  padding-top: 16px;
+`
+const CardText = styled.p`
+  font-size: 16px;
+  padding-top: 16px;
+
+  @media ${media.desktop} {
+    font-size: 18px;
+  }
 `
 
 const Card = ({ title, text, tags, TitleComponent = CardTitle }) => {
@@ -24,7 +32,7 @@ const Card = ({ title, text, tags, TitleComponent = CardTitle }) => {
         ))}
       </TagsContainer>
     ) : text ? (
-      <p>{text}</p>
+      <CardText>{text}</CardText>
     ) : null
   
   return (
