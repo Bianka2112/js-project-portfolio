@@ -69,7 +69,7 @@ const SkillTagTitles = styled.h4`
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
-  width: 100%;
+
 `
 
 const Skills = ({ skills }) => {
