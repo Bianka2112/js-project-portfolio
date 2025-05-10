@@ -54,6 +54,10 @@ const SkillsContainer = styled.section`
     justify-items: center;
     max-width: 1200px;
     margin: 0 auto;
+
+    & ul li {
+      text-align: left;
+    }
   }
 `
 

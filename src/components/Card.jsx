@@ -1,8 +1,12 @@
 import styled from "styled-components"
-// import { media } from "../styles/media"
+import { media } from "../styles/media"
 
 const Tag = styled.li`
   display: block;
+
+  @media ${media.desktop} {
+    align-self: left;
+  }
 `
 const TagsContainer = styled.ul`
  
@@ -24,10 +28,10 @@ const Card = ({ title, text, tags, TitleComponent = CardTitle }) => {
     ) : null
   
   return (
-    <article>
+    <section>
       <TitleComponent>{title}</TitleComponent>
       {cardContent}
-    </article>
+    </section>
   )
 }
 

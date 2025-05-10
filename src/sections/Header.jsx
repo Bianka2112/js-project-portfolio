@@ -21,7 +21,7 @@ const HeroHeader = styled.header`
   }
 `
 
-const TopLine = styled.h3`
+const TopLine = styled.h2`
   font-size: 24px;
 
   @media ${media.desktop} {
