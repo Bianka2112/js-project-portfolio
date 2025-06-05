@@ -1,8 +1,9 @@
+import styled from "styled-components"
+
 import Card from "../components/Card"
 import LinkButton from "../components/LinkButton"
+import { GithubIconSVG, IconsList, WebIconSVG } from "../components/SocialIcons"
 import StyledTags from "../components/StyledTags"
-import { IconsList } from "../components/SocialIcons"
-import styled from "styled-components"
 import { media } from "../styles/media"
 
 const FeaturedSection = styled.section`
@@ -35,7 +36,7 @@ const ProjectsContainer = styled.div`
   padding-top: 64px;
 
   @media ${media.desktop} {
-    flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+    flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
     flex-wrap: nowrap;
     padding-top: 128px;
     gap: 125px;
@@ -99,7 +100,7 @@ const FeaturedProjects = ({ projects }) => {
       {projects.map((proj, index) => {
         const isEven = index % 2 === 0;
         return (
-          <ProjectsContainer key={proj.name} reverse={!isEven}>
+          <ProjectsContainer key={proj.name} $reverse={!isEven}>
             <ProjectImage 
               src={proj.image} 
               alt={`${proj.name} screenshot`}
@@ -116,14 +117,13 @@ const FeaturedProjects = ({ projects }) => {
               />
             <LinkContainer>
               <LinkButton 
-                $primary
                 link={proj.netlify}
-                IconComponent={IconsList.web}
+                IconComponent={WebIconSVG}
                 linkUse="Live Demo"
                 />
               <LinkButton 
                 link={proj.github}
-                IconComponent={IconsList.github}
+                IconComponent={GithubIconSVG}
                 linkUse="View Code"
                 />
             </LinkContainer>

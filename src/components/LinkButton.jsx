@@ -13,25 +13,34 @@ const LinkButtonStyle = styled.a`
   align-items: center;
   gap: 16px;
   flex-shrink: 0;
+  transition: transform 0.2s ease-in-out;
 
   &:hover {
-    scale: 1.1;
+    transform: scale(1.1);
   }
+`
+
+const IconStyle = styled.span`
+  font-size: 32px;
+  display: flex;
+  align-items: center;
 `
 
 const LinkButton = ({ link, linkUse, IconComponent, ...props }) => {
   return (
-    <>
       <LinkButtonStyle 
         href={link} 
         target="_blank" 
         rel="noopener noreferrer"
         {...props}>
 
-        {IconComponent && <IconComponent />}
+        {IconComponent && (
+          <IconStyle> 
+            <IconComponent />
+          </IconStyle>
+        )}
         {linkUse}
       </LinkButtonStyle>
-    </>
   )
 }
 
