@@ -60,7 +60,7 @@ export const HeartIcon = () => {
 
 export const WebIcon = () => {
   return (
-    <SocialIcon href="https://www.biankaromero.com." target="_blank" rel="noopener noreferrer" alt="Link to Photography portfolio">
+    <SocialIcon href="https://biankashoots.myportfolio.com" target="_blank" rel="noopener noreferrer" alt="Link to Photography portfolio">
       <ion-icon name="globe-outline"></ion-icon>
     </SocialIcon>
   )
