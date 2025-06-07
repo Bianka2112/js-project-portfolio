@@ -20,10 +20,18 @@ const SocialIcon = styled.a`
   }
 `
 
-const HeartsIcon = styled(SocialIcon)`
+const HeartsIcon = styled.button`
+  font-size: 32px;
+  color: inherit;
   transition: transform 0.6s ease;
   perspective: 1000px; /* Needed for 3D effect */
+  border-color: transparent;
+  background: transparent;
 
+  &:hover {
+    transform: scale(1.2);
+  }
+  
   &.spin {
     animation: spinYColor 0.8s ease;
   }
@@ -31,21 +39,13 @@ const HeartsIcon = styled(SocialIcon)`
   @keyframes spinYColor {
     0% {
       transform: rotateY(0deg);
-      color: #b0b0b062;
-      border-color: #b0b0b062;
-      background: transparent;
     }
     50% {
       transform: rotateY(180deg);
       color: red;          
-      border-color: red;
-      background: transparent;
     }
     100% {
       transform: rotateY(360deg);
-      color: #b0b0b062; 
-      border-color: #b0b0b062;
-      background: transparent;
     }
   }
 `
@@ -91,7 +91,7 @@ export const HeartIcon = () => {
   }
 
   return (
-    <HeartsIcon className="spin" key={animateKey} onClick={handleClick} aria-label="Like button">
+    <HeartsIcon className="spin" key={animateKey} onClick={handleClick} tabIndex={0} aria-label="Animate Like button">
       <IoHeart />
     </HeartsIcon>
   )
@@ -100,8 +100,8 @@ export const HeartIcon = () => {
 export const WebIconSVG = () => <IoGlobeOutline />
 export const WebIcon = () => {
   return (
-    <SocialIcon href="https://biankashoots.myportfolio.com" target="_blank" rel="noopener noreferrer" aria-label="Link to Photography portfolio">
-      <IoGlobeOutline />
+    <SocialIcon href="https://biankashoots.myportfolio.com" target="_blank" rel="noopener noreferrer" aria-label="Bianka Romero's Photography Portfolio">
+      <IoGlobeOutline aria-hidden="true" focusable="false"    />
     </SocialIcon>
   )
 }

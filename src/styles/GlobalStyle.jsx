@@ -21,6 +21,11 @@ export const GlobalStyle = createGlobalStyle`
      color: inherit;
    }
 
+   *:focus-visible {
+      outline: 2px solid blueviolet;
+      outline-offset: 2px;
+   }
+
 @keyframes slideInLeft {
   from {
     opacity: 0;

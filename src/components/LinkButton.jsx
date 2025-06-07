@@ -36,7 +36,7 @@ const LinkButton = ({ link, linkUse, IconComponent, ...props }) => {
 
         {IconComponent && (
           <IconStyle> 
-            <IconComponent />
+           <span aria-hidden="true"><IconComponent /></span>
           </IconStyle>
         )}
         {linkUse}

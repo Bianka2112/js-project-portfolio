@@ -6,7 +6,7 @@ import { GithubIconSVG, IconsList, WebIconSVG } from "../components/SocialIcons"
 import StyledTags from "../components/StyledTags"
 import { media } from "../styles/media"
 
-const FeaturedSection = styled.section`
+const FeaturedSection = styled.main`
   padding: 64px 16px;
 
   @media ${media.tablet} {
@@ -94,7 +94,7 @@ const LinkContainer = styled.div`
 
 const FeaturedProjects = ({ projects }) => {
   return (
-    <FeaturedSection>
+    <FeaturedSection role="main">
       <SectionTitle>Featured Projects</SectionTitle>
 
       {projects.map((proj, index) => {

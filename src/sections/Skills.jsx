@@ -61,15 +61,15 @@ const SkillsContainer = styled.section`
   }
 `
 
-const SkillTagTitles = styled.h4`
+const SkillTagTitles = styled.h3`
+  font-size: 16px;
   border-radius: 4px;
   border: 1px solid #FFF;
   background: #000;
   padding: 2px 6px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: center;
-  margin-bottom: 16px;
-
 `
 
 const Skills = ({ skills }) => {
