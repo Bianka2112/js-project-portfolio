@@ -29,7 +29,8 @@ const ContactItem = styled.a`
   transition: color 0.2s ease;
 
   &:hover {
-    color: #0077ff; /* example hover color */
+    transform: scale(1.1);
+    color: #0077ff; 
   }
 
   svg {

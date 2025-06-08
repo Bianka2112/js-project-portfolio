@@ -14,7 +14,7 @@ const IconsContainer = styled.div`
 const SocialIcon = styled.a`
   font-size: 32px;
   color: inherit;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 
   svg {
     width: 1em;
@@ -24,6 +24,23 @@ const SocialIcon = styled.a`
 
   &:hover {
     transform: scale(1.2);
+    color: #0077ff;
+  }
+
+  /* Create a smooth underline animation */
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #0077ff;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 
   @media ${media.tablet} {
@@ -52,6 +69,22 @@ const HeartsIcon = styled.button`
 
   &:hover {
     transform: scale(1.2);
+    color: #0077ff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #0077ff;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
   
   &.spin {
@@ -116,8 +149,7 @@ export const HeartIcon = () => {
   const [animateKey, setAnimateKey] = useState(0)
 
   const handleClick = () => {
-    // setLikeCount((prev) => prev + 1)
-    setAnimateKey((prev) => prev + 1) // triggers re-animation
+    setAnimateKey((prev) => prev + 1) 
   }
 
   return (
