@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { IoGlobeOutline, IoHeart, IoLogoCodepen, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5"
+import { IoGlobeOutline, IoHeart, IoLogoCodepen, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin, IoCameraOutline, IoCamera, IoCameraReverseOutline } from "react-icons/io5"
 import styled from "styled-components"
 import { media } from "../styles/media"
 
@@ -131,7 +131,7 @@ export const WebIconSVG = () => <IoGlobeOutline />
 export const WebIcon = () => {
   return (
     <SocialIcon href="https://biankashoots.myportfolio.com" target="_blank" rel="noopener noreferrer" aria-label="Bianka Romero's Photography Portfolio">
-      <IoGlobeOutline aria-hidden="true" focusable="false"    />
+      <IoCamera aria-hidden="true" focusable="false"    />
     </SocialIcon>
   )
 }
@@ -151,7 +151,7 @@ return (
     <LinkedinIcon />
     <GithubIcon />
     <CodepenIcon />
-    <InstagramIcon />
+    {/* <InstagramIcon /> */}
     <WebIcon />
     <HeartIcon />
   </IconsContainer>

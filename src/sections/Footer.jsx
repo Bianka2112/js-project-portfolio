@@ -18,7 +18,7 @@ const FooterContainer = styled.footer`
   }
 `
 
-const FooterTitle = styled.h3`
+const FooterTitle = styled.h2`
   text-align: center;
   margin-bottom: 16px;
 
@@ -45,7 +45,7 @@ const Footer = ({ mode = "dark" }) => {
       <CircleImg src={BiankaRomero} alt="" />
       <Contact 
         name="Bianka L Romero"
-        phone="+46(0) 76 716 97 46"
+        phone="+46 76 716 97 46"
         email="bianka_romero@me.com"
         />
         <SocialIcons />
