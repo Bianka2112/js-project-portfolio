@@ -41,12 +41,13 @@ const ArticlesContainer = styled.div`
   @media ${media.tablet} {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: stretch;
   }
 
   @media ${media.desktop} {
     flex-direction: row;
     flex-wrap: nowrap;
+    align-items: stretch;
     padding-top: 128px;
     gap: 125px;
     max-width: 1200px;
@@ -54,17 +55,17 @@ const ArticlesContainer = styled.div`
   }
 `
 
-const ProjectImage = styled.img`
-  max-width: 100%;
+const ArticleImage = styled.img`
+  width: 100%;
   height: 200px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  flex: 1;
 
   @media ${media.tablet} {
-    width: 200px;
+    width: 50%;
     height: 100%;
+    flex: 1;
   }
 
   @media ${media.desktop} {
@@ -85,6 +86,7 @@ const ArticlesTextContainer = styled.div`
 `
 
 const LinkContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -101,7 +103,7 @@ const Reflections = ({ articles }) => {
       {articles.map((article, index) => {
         return (
           <ArticlesContainer key={article.title}>
-            <ProjectImage 
+            <ArticleImage 
               src={article.image} 
               alt={`${article.title} screenshot`}
               className="slide-in-left"/>
