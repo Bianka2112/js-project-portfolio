@@ -97,12 +97,12 @@ const CardHeading = styled.h3`
 
 const Reflections = ({ articles }) => {
   return (
-    <ArticleSection role="articles">
+    <ArticleSection >
       <SectionTitle>Personal Reflections</SectionTitle>
 
       {articles.map((article, index) => {
         return (
-          <ArticlesContainer key={article.title}>
+          <ArticlesContainer role="article" key={article.title}>
             <ArticleImage 
               src={article.image} 
               alt={`${article.title} screenshot`}
