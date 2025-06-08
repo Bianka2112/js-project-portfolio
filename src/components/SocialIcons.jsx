@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { IoGlobeOutline, IoHeart, IoLogoCodepen, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5"
 import styled from "styled-components"
+import { media } from "../styles/media"
 
 const IconsContainer = styled.div`
   display: flex;
@@ -15,9 +16,24 @@ const SocialIcon = styled.a`
   color: inherit;
   transition: transform 0.3s ease;
 
+  svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+  }
+
   &:hover {
     transform: scale(1.2);
   }
+
+  @media ${media.tablet} {
+    font-size: 40px;
+  }
+
+  @media ${media.desktop} {
+    font-size: 40px;
+  }
+
 `
 
 const HeartsIcon = styled.button`
@@ -27,6 +43,12 @@ const HeartsIcon = styled.button`
   perspective: 1000px; /* Needed for 3D effect */
   border-color: transparent;
   background: transparent;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+  }
 
   &:hover {
     transform: scale(1.2);
@@ -47,6 +69,14 @@ const HeartsIcon = styled.button`
     100% {
       transform: rotateY(360deg);
     }
+  }
+
+  @media ${media.tablet} {
+    font-size: 40px;
+  }
+
+  @media ${media.desktop} {
+    font-size: 40px;
   }
 `
 export const LinkedinIcon = () => {
