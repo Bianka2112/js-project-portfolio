@@ -8,7 +8,15 @@ import { WebIconSVG } from "../components/SocialIcons"
 const ArticleSection = styled.section`
   background: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.spacing.large};
+  padding: 64px 16px;
+
+@media ${media.tablet} {
+  padding: 64px 24px;
+}
+
+@media ${media.desktop} {
+  padding: 128px;
+}
 `
 
 const SectionTitle = styled.h2`
@@ -20,15 +28,24 @@ const SectionTitle = styled.h2`
   }
 `
 
-const ProjectsContainer = styled.div`
+const ArticlesContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   padding-top: 64px;
+  gap: 32px;
+
+  @media ${media.tablet} {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
   @media ${media.desktop} {
+    flex-direction: row;
     flex-wrap: nowrap;
     padding-top: 128px;
     gap: 125px;
@@ -38,11 +55,17 @@ const ProjectsContainer = styled.div`
 `
 
 const ProjectImage = styled.img`
-  width: 100%;
-  max-width: 600px;
+  max-width: 100%;
+  height: 200px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+  flex: 1;
+
+  @media ${media.tablet} {
+    width: 200px;
+    height: 100%;
+  }
 
   @media ${media.desktop} {
     width: 50%;
@@ -50,23 +73,15 @@ const ProjectImage = styled.img`
   }
 `
 
-const ProjectsTextContainer = styled.div`
+const ArticlesTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
   width: 100%;
-  padding-top: 64px;
   gap: 32px;
 
-  @media ${media.tablet}{
-    min-width: 580px;
-  }
-
-  @media ${media.desktop} {
-    width: 50%;
-    padding: 0;
-    flex-shrink: 1;
-  }
 `
 
 const LinkContainer = styled.div`
@@ -85,30 +100,30 @@ const Reflections = ({ articles }) => {
 
       {articles.map((article, index) => {
         return (
-          <ProjectsContainer key={article.title}>
+          <ArticlesContainer key={article.title}>
             <ProjectImage 
               src={article.image} 
               alt={`${article.title} screenshot`}
               className="slide-in-left"/>
 
-            <ProjectsTextContainer className="slide-in-right">
-            <StyledTags 
-              tags={article.date}
-              />
-            <Card 
-              TitleComponent={CardHeading}
-              title={article.title}
-              text={article.text}
-              />
-            <LinkContainer>
-              <LinkButton 
-                link={article.link}
-                IconComponent={WebIconSVG}
-                linkUse="Read article"
+            <ArticlesTextContainer className="slide-in-right">
+              <StyledTags 
+                tags={article.date}
                 />
-            </LinkContainer>
-                </ProjectsTextContainer>
-          </ProjectsContainer>
+              <Card 
+                TitleComponent={CardHeading}
+                title={article.title}
+                text={article.text}
+                />
+              <LinkContainer>
+                <LinkButton 
+                  link={article.link}
+                  IconComponent={WebIconSVG}
+                  linkUse="Read article"
+                  />
+              </LinkContainer>
+            </ArticlesTextContainer>
+          </ArticlesContainer>
         )
       })}
     </ArticleSection>

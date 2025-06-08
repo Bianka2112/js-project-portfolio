@@ -12,10 +12,10 @@ const TechTag = styled.p`
   color: black;
   border: 1px solid black;
   padding: 2px 6px;
+  margin: 4px;
   display: flex;
   justify-content: center;
   white-space: nowrap;
-  margin: 4px;
 
   @media ${media.tablet}, ${media.desktop} {
     flex: 0 0 auto; 

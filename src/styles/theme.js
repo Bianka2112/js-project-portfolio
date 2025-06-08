@@ -1,8 +1,10 @@
 export const theme = {
   spacing: {
-    small: "0.5rem",
-    medium: "1rem",
-    large: "2rem"
+    none: "0px",
+    small: "16px",
+    medium: "32px",
+    large: "64px",
+    xlarge: "128px",
   },
   colors: {
     light: {

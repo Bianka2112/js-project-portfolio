@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const LinkButtonStyle = styled.a`
+  font-size: 18px;
   border-radius: 12px;
   border: 2px solid black;
   background: #000;
@@ -13,7 +14,7 @@ const LinkButtonStyle = styled.a`
   align-items: center;
   gap: 16px;
   flex-shrink: 0;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.1);
@@ -21,9 +22,12 @@ const LinkButtonStyle = styled.a`
 `
 
 const IconStyle = styled.span`
-  font-size: 32px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 100%;
+  line-height: 0;
+  font-size: 32px;
 `
 
 const LinkButton = ({ link, linkUse, IconComponent, ...props }) => {
@@ -35,8 +39,8 @@ const LinkButton = ({ link, linkUse, IconComponent, ...props }) => {
         {...props}>
 
         {IconComponent && (
-          <IconStyle> 
-           <span aria-hidden="true"><IconComponent /></span>
+          <IconStyle aria-hidden="true"> 
+           <IconComponent />
           </IconStyle>
         )}
         {linkUse}

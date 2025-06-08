@@ -1,14 +1,14 @@
 {
   "articles": [
     {
-      "image": "images/articlesPlaceholder-unsplash.jpg",
+      "image": "images/abstract-unsplash.jpg",
       "title": "Building Better UX in React",
       "text": "A breakdown of accessible design patterns using modern React tools.",
       "date": "May 2025",
       "link": "https://external-link.com/article1"
     },
     {
-      "image": "images/articlesPlaceholder-unsplash.jpg",
+      "image": "images/abstract-unsplash.jpg",
       "title": "From Design to Deployment",
       "text": "What I’ve learned turning Figma designs into scalable apps.",
       "date": "June 2025",
