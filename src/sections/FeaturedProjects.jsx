@@ -102,6 +102,7 @@ const FeaturedProjects = ({ projects }) => {
         return (
           <ProjectsContainer key={proj.name} $reverse={!isEven}>
             <ProjectImage 
+              loading="lazy"
               src={proj.image} 
               alt={`${proj.name} screenshot`}
               className="slide-in-left"/>

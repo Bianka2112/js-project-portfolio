@@ -104,6 +104,7 @@ const Reflections = ({ articles }) => {
         return (
           <ArticlesContainer role="article" key={article.title}>
             <ArticleImage 
+              loading="lazy"
               src={article.image} 
               alt={`${article.title} screenshot`}
               className="slide-in-left"/>
