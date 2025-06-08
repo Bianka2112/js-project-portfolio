@@ -6,7 +6,7 @@ const TagsContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const TechTags = styled.p`
+const TechTag = styled.p`
   border-radius: 4px;
   max-width: 100%;
   color: black;
@@ -18,16 +18,22 @@ const TechTags = styled.p`
   margin: 4px;
 
   @media ${media.tablet}, ${media.desktop} {
-    flex: 1 0 0; 
+    flex: 0 0 auto; 
 }
 `
 
 const StyledTags = ({ tags }) => {
+  if (!tags) return null
+
+  const tagList = Array.isArray(tags) ? tags : [tags]
+
+  if (tagList.length === 0) return null
+
   return (
     <TagsContainer>
-      {tags.map((tag, index) => {
+      {tagList.map((tag, index) => {
         return (
-          <TechTags key={index}>{tag}</TechTags>
+          <TechTag key={index}>{tag}</TechTag>
         )}
         )}
     </TagsContainer>

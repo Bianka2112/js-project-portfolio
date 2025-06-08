@@ -10,6 +10,8 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: ${({ theme, $mode}) => theme.colors[$mode].background};
+  color: ${({ theme, $mode}) => theme.colors[$mode].text};
 
   @media ${media.desktop} {
     padding: 128px 16px;
@@ -36,9 +38,9 @@ const CircleImg = styled.img`
   object-fit: cover;
 `
 
-const Footer = () => {
+const Footer = ({ mode = "dark" }) => {
   return (
-    <FooterContainer>
+    <FooterContainer $mode={mode}>
       <FooterTitle>Let's Connect</FooterTitle>
       <CircleImg src={BiankaRomero} alt="" />
       <Contact 

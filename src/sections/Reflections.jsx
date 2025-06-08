@@ -1,21 +1,14 @@
 import styled from "styled-components"
-
-import Card from "../components/Card"
-import LinkButton from "../components/LinkButton"
-import { GithubIconSVG, IconsList, WebIconSVG } from "../components/SocialIcons"
-import StyledTags from "../components/StyledTags"
 import { media } from "../styles/media"
+import StyledTags from "../components/StyledTags"
+import LinkButton from "../components/LinkButton"
+import Card from "../components/Card"
+import { WebIconSVG } from "../components/SocialIcons"
 
-const FeaturedSection = styled.main`
-  padding: 64px 16px;
-
-  @media ${media.tablet} {
-    padding: 64px 24px;
-  }
-  
-  @media ${media.desktop} {
-    padding: 128px;
-  }
+const ArticleSection = styled.section`
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.primary};
+  padding: ${({ theme }) => theme.spacing.large};
 `
 
 const SectionTitle = styled.h2`
@@ -36,7 +29,6 @@ const ProjectsContainer = styled.div`
   padding-top: 64px;
 
   @media ${media.desktop} {
-    flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
     flex-wrap: nowrap;
     padding-top: 128px;
     gap: 125px;
@@ -54,7 +46,6 @@ const ProjectImage = styled.img`
 
   @media ${media.desktop} {
     width: 50%;
-    /* max-width: 540px; */
     height: auto;
   }
 `
@@ -78,61 +69,50 @@ const ProjectsTextContainer = styled.div`
   }
 `
 
-const ProjectHeading = styled.h3`
-  font-size: 24px;
-
-  @media ${media.desktop} {
-    font-size: 30px;
-  }
-`
-
 const LinkContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
 `
+const CardHeading = styled.h3`
+  font-size: 30px;
+`
 
-const FeaturedProjects = ({ projects }) => {
+const Reflections = ({ articles }) => {
   return (
-    <FeaturedSection role="main">
-      <SectionTitle>Featured Projects</SectionTitle>
+    <ArticleSection role="articles">
+      <SectionTitle>Personal Reflections</SectionTitle>
 
-      {projects.map((proj, index) => {
-        const isEven = index % 2 === 0;
+      {articles.map((article, index) => {
         return (
-          <ProjectsContainer key={proj.name} $reverse={!isEven}>
+          <ProjectsContainer key={article.title}>
             <ProjectImage 
-              src={proj.image} 
-              alt={`${proj.name} screenshot`}
+              src={article.image} 
+              alt={`${article.title} screenshot`}
               className="slide-in-left"/>
 
             <ProjectsTextContainer className="slide-in-right">
             <StyledTags 
-              tags={proj.tags}
+              tags={article.date}
               />
             <Card 
-              TitleComponent={ProjectHeading}
-              title={proj.name}
-              text={proj.bio}
+              TitleComponent={CardHeading}
+              title={article.title}
+              text={article.text}
               />
             <LinkContainer>
               <LinkButton 
-                link={proj.netlify}
+                link={article.link}
                 IconComponent={WebIconSVG}
-                linkUse="Live Demo"
-                />
-              <LinkButton 
-                link={proj.github}
-                IconComponent={GithubIconSVG}
-                linkUse="View Code"
+                linkUse="Read article"
                 />
             </LinkContainer>
                 </ProjectsTextContainer>
           </ProjectsContainer>
         )
       })}
-    </FeaturedSection>
+    </ArticleSection>
   )
 }
 
-export default FeaturedProjects
+export default Reflections

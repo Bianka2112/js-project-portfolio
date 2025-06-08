@@ -5,8 +5,13 @@ export const theme = {
     large: "2rem"
   },
   colors: {
-    background: "white",
-    primary: "black",
-    secondary: "white"
-  }
+    light: {
+      background: "white",
+      text: "black"
+    },
+    dark: {
+      background: "black",
+      text: "white"
+    },
+  },
 }

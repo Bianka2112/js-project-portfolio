@@ -24,22 +24,26 @@ const CardText = styled.p`
 `
 
 const Card = ({ title, text, tags, TitleComponent = CardTitle }) => {
-   const cardContent = 
-    tags ? (
-      <TagsContainer>
+   const cardContent = (
+    <>
+     {tags && (
+       <TagsContainer>
         {tags.map((tag, index) => (
           <Tag key={index}>{tag}</Tag>
         ))}
       </TagsContainer>
-    ) : text ? (
+    )} 
+    {text && (
       <CardText>{text}</CardText>
-    ) : null
+    )}
+    </>
+  )
   
   return (
-    <section>
+    <article>
       <TitleComponent>{title}</TitleComponent>
       {cardContent}
-    </section>
+    </article>
   )
 }
 
